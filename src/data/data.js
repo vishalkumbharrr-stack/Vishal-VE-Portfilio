@@ -1,64 +1,53 @@
-import thumb1 from '../assets/thumb1.jpg'; 
-import thumb2 from '../assets/thumb2.jpg'; 
-import thumb3 from '../assets/thumb3.jpg'; 
-
 export const categories = [
-  { name: "All", count: 29 },
-  { name: "Motion Graphics", count: 8 },
-  { name: "Explainer", count: 16 },
-  { name: "Promo", count: 9 },
-  { name: "Talking Head", count: 6 },
-  { name: "Shorts", count: 6 },
-  { name: "Documentary", count: 2 },
-  
+  { name: "All", count: 3 },
+  { name: "Motion Graphics", count: 0 },
+  { name: "Explainer", count: 0 },
+  { name: "Promo", count: 0 },
+  { name: "Talking Head", count: 0 },
+  { name: "Shorts", count: 3 },
+  { name: "Documentary", count: 0 },
 ];
 
 export const projects = [
-  
-  // {
-  //   id: 2,
-  //   title: "Cyber Security",
-  //   tags: ["Motion Graphics", "Promo"],
-  //   category: "Motion Graphics",
-  //   duration: "1:06",
-  //   client: "Impel IT",
-  //   date: "11/10/2025",
-  //   description: "अजाणतेपणी एक चूक...",
-  //   thumbnail: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
-  //   videoUrl: "https://www.youtube.com/watch?v=तुमची_लिंक",
-  //   type: "horizontal" // 👈 हे ॲड करा
-  // },
-  // 👇 खालील उदाहरण Shorts/Vertical साठी आहे 👇
+  {
+    id: 1,
+    title: "My First Short Video",
+    tags: ["Shorts", "Reels"],
+    category: "Shorts",
+    duration: "0:45",
+    client: "Personal",
+    date: "10/10/2025",
+    description: "A quick vertical video edit for Instagram reels.",
+    thumbnail: "/thumb1.jpg", // 👈 public फोल्डर मधील इमेज
+    videoUrl: "https://www.youtube.com/shorts/YtXhDxomB9w",
+    type: "vertical"
+  },
+  {
+    id: 2,
+    title: "Trending Reel Edit",
+    tags: ["Shorts", "Reels"],
+    category: "Shorts",
+    duration: "0:30",
+    client: "Personal",
+    date: "10/12/2025",
+    description: "Fast-paced instagram reel with trending audio.",
+    thumbnail: "/thumb2.jpg", // 👈 public फोल्डर मधील इमेज
+    videoUrl: "https://youtube.com/shorts/fKkockWOvOw?feature=share",
+    type: "vertical"
+  },
   {
     id: 3,
+    title: "Cinematic Short Edit",
     tags: ["Shorts", "Reels"],
     category: "Shorts",
-    
-    thumbnail: thumb1, // 👈 इथे इम्पोर्ट केलेले नाव टाका,
-    videoUrl: "https://www.youtube.com/shorts/YtXhDxomB9w",
-    type: "vertical" // 👈 Shorts/Reels साठी हे वापरा
-  },
-
-  {
-    id: 4,
-    tags: ["Shorts", "Reels"],
-    category: "Shorts",
+    duration: "0:55",
     client: "Personal",
-    thumbnail: thumb2, // 👈 इथे इम्पोर्ट केलेले नाव टाका,
-    videoUrl: "https://youtube.com/shorts/fKkockWOvOw?feature=share",
-    type: "vertical" // 👈 Shorts/Reels साठी हे वापरा
-  },
-
-  {
-    id: 5,
-    tags: ["Shorts", "Reels"],
-    category: "Shorts",
-    client: "Personal",
-    thumbnail: thumb3, // 👈 इथे इम्पोर्ट केलेले नाव टाका,
+    date: "10/15/2025",
+    description: "Cinematic color graded short video.",
+    thumbnail: "/thumb3.jpg", // 👈 public फोल्डर मधील इमेज
     videoUrl: "https://www.youtube.com/shorts/7bXi_e_enxE",
-    type: "vertical" // 👈 Shorts/Reels साठी हे वापरा
+    type: "vertical"
   }
-  // ... बाकीचे सर्व प्रोजेक्ट्स असेच ॲड करा
 ];
 
 export const services = [

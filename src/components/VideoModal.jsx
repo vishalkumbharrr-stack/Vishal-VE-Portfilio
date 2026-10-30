@@ -4,7 +4,6 @@ import { X } from 'lucide-react';
 export default function VideoModal({ isOpen, onClose, videoUrl }) {
   if (!isOpen || !videoUrl) return null;
 
-  // YouTube लिंक मधून Video ID काढण्यासाठी फंक्शन (Shorts आणि Normal दोन्हीसाठी)
   const getEmbedUrl = (url) => {
     let videoId = '';
     if (url.includes('youtube.com/shorts/')) {
@@ -21,7 +20,6 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
 
   return (
     <AnimatePresence>
-      {/* बॅकग्राउंड (काळा पडदा) */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -29,12 +27,6 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
         onClick={onClose}
         className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
       >
-        {/* 
-          व्हिडिओ कंटेनर: 
-          - max-w-[400px] मुळे तो फोनसारखा दिसेल.
-          - aspect-[9/16] मुळे तो उभा (Vertical) होईल (तुमच्या स्क्रीनशॉटसारखा).
-          - rounded-2xl मुळे कडा गोलाकार होतील.
-        */}
         <motion.div
           initial={{ scale: 0.9, y: 20 }}
           animate={{ scale: 1, y: 0 }}
@@ -42,7 +34,6 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
           onClick={(e) => e.stopPropagation()} 
           className="relative w-full max-w-[380px] h-[85vh] max-h-[700px] bg-black rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.3)] border border-white/10"
         >
-          {/* क्लोज बटण (उजव्या कोपऱ्यात) */}
           <button
             onClick={onClose}
             className="absolute top-4 right-4 z-50 bg-black/60 hover:bg-red-600 text-white p-2 rounded-full backdrop-blur-md transition-colors"
@@ -50,7 +41,6 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
             <X size={20} />
           </button>
 
-          {/* YouTube Iframe (आपोआप पूर्ण स्क्रीन भरेल) */}
           <iframe
             src={getEmbedUrl(videoUrl)}
             title="Video Player"
@@ -59,7 +49,6 @@ export default function VideoModal({ isOpen, onClose, videoUrl }) {
             allowFullScreen
           ></iframe>
 
-          {/* तुमच्या स्क्रीनशॉटसारखा लाल प्रोग्रेस बार (खाली) */}
           <div className="absolute bottom-0 left-0 w-full h-1.5 bg-red-600 rounded-b-2xl"></div>
         </motion.div>
       </motion.div>
