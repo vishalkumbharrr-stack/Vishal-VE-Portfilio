@@ -3,11 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { projects, categories } from '../data/data';
 import SectionHeading from '../components/ui/SectionHeading';
 import ProjectCard from '../components/ProjectCard';
+import VideoModal from '../components/VideoModal'; // 👈 नवीन इम्पोर्ट
 import { ArrowRight } from 'lucide-react';
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [visibleCount, setVisibleCount] = useState(6);
+  
+  // 👇 नवीन स्टेट: कोणता व्हिडिओ उघडायचा आहे हे ठरवण्यासाठी
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   const filteredProjects = activeCategory === "All"
     ? projects
@@ -21,13 +25,14 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 max-w-7xl mx-auto px-6">
+    <section id="projects" className="py-20 max-w-7xl mx-auto px-6 relative">
       <SectionHeading
         title="My Video"
         highlight="Projects"
         subtitle="From smooth transitions to precise audio syncing and dynamic animations — I focus on making your content not just polished, but powerful."
       />
 
+      {/* Category Pills */}
       <div className="flex flex-wrap justify-center gap-2.5 mb-12">
         {categories.map((cat) => {
           const isActive = activeCategory === cat.name;
@@ -54,6 +59,7 @@ export default function Projects() {
         })}
       </div>
 
+      {/* Animated Projects Grid */}
       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <AnimatePresence mode="popLayout">
           {displayedProjects.map((project, index) => (
@@ -65,12 +71,17 @@ export default function Projects() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.35, delay: (index % 3) * 0.08 }}
             >
-              <ProjectCard project={project} />
+              {/* 👇 ProjectCard ला onPlay फंक्शन पास केले 👇 */}
+              <ProjectCard 
+                project={project} 
+                onPlay={() => setSelectedVideo(project.videoUrl)} 
+              />
             </motion.div>
           ))}
         </AnimatePresence>
       </motion.div>
 
+      {/* Load More Button */}
       {visibleCount < filteredProjects.length && (
         <div className="text-center mt-12">
           <motion.button
@@ -83,6 +94,13 @@ export default function Projects() {
           </motion.button>
         </div>
       )}
+
+      {/* 👇 इथे Modal रेंडर करा 👇 */}
+      <VideoModal 
+        isOpen={!!selectedVideo} 
+        onClose={() => setSelectedVideo(null)} 
+        videoUrl={selectedVideo} 
+      />
     </section>
   );
 }

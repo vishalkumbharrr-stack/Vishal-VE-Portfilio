@@ -1,3 +1,7 @@
+import thumb1 from '../assets/thumb1.jpg'; 
+import thumb2 from '../assets/thumb2.jpg'; 
+import thumb3 from '../assets/thumb3.jpg'; 
+
 export const categories = [
   { name: "All", count: 29 },
   { name: "Motion Graphics", count: 8 },
@@ -6,21 +10,55 @@ export const categories = [
   { name: "Talking Head", count: 6 },
   { name: "Shorts", count: 6 },
   { name: "Documentary", count: 2 },
+  
 ];
 
 export const projects = [
-  { id: 1, title: "The Power of Asking Better Questions | Angela ORR", tags: ["Talking Head", "Explainer"], category: "Talking Head", duration: "8:22", client: "Growtheo", date: "7/17/2025", description: "Do you often find yourself stuck in a situation where you're not getting the answers you need because...", thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" },
-  { id: 2, title: "Cyber Security", tags: ["Motion Graphics", "Promo"], category: "Motion Graphics", duration: "1:06", client: "Impel IT", date: "11/10/2025", description: "अजाणतेपणी एक चूक, सामान्य अनोळखी लिंक... आजच सावध व्हा आणि तुमचा डेटा सुरक्षित ठेवा.", thumbnail: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80" },
-  { id: 3, title: "Digital Marketing", tags: ["Motion Graphics", "Promo"], category: "Motion Graphics", duration: "1:02", client: "Impel IT", date: "11/10/2025", description: "डिजिटल मार्केटिंगच्या साहाय्याने तुमचा व्यवसाय अधिक लोकांपर्यंत पोहोचवा आणि विक्री वाढवा.", thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" },
-  { id: 4, title: "Web & E-commerce Store Development", tags: ["Motion Graphics", "Promo"], category: "Promo", duration: "1:01", client: "Impel IT", date: "11/11/2025", description: "आकर्षक आणि वेगवान ई-कॉमर्स वेबसाईट बनवून तुमचा ऑनलाइन व्यवसाय सुरू करा.", thumbnail: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80" },
-  { id: 5, title: "Business Email Service", tags: ["Motion Graphics", "Promo"], category: "Motion Graphics", duration: "1:05", client: "Impel IT", date: "11/4/2025", description: "प्रोफेशनल बिझनेस ईमेल वापरून तुमच्या ब्रँडची विश्वासार्हता वाढवा.", thumbnail: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=800&q=80" },
-  { id: 6, title: "From Stuck to Strong: The Brain Reset You Need | Angela Orr", tags: ["Talking Head", "Explainer"], category: "Talking Head", duration: "7:59", client: "Growtheo", date: "7/17/2025", description: "Feeling stuck, lost, or like your best years are behind you? You're not alone and you're not too late.", thumbnail: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" },
-  { id: 7, title: "The Real Reason You Can't Change (And How to Fix It in 21 Days)", tags: ["Talking Head", "Explainer"], category: "Explainer", duration: "6:45", client: "Growtheo", date: "6/30/2025", description: "You've tried every habit hack, diet, and self-help book - and yet change still feels impossible. Why?", thumbnail: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80" },
-  { id: 8, title: "Calm Your Nervous System in 60 Seconds with HeartMath Technique", tags: ["Talking Head", "Explainer"], category: "Explainer", duration: "7:18", client: "Growtheo", date: "6/25/2025", description: "Discover the powerful HeartMath technique to calm your nervous system in just 60 seconds!", thumbnail: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" },
-  { id: 9, title: "Granola to Nutritionist - Short 03", tags: ["Shorts", "Promo"], category: "Shorts", duration: "1:01", client: "Eco Farming", date: "6/28/2025", description: "Short promotional reel showcasing organic nutrition tips and healthy eating habits.", thumbnail: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80" },
-  { id: 10, title: "API & API Endpoints Explained with Simple Examples", tags: ["Shorts", "Explainer"], category: "Shorts", duration: "1:18", client: "Stack Learner", date: "4/16/2024", description: "Every time you use an app or website, APIs are working behind the scenes to fetch data.", thumbnail: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" },
-  { id: 11, title: "Bangladesh's First Flexible Discount for EdTech - Learn Without Limits!", tags: ["Promo", "Motion Graphics"], category: "Promo", duration: "1:35", client: "Stack Learner", date: "4/11/2024", description: "Bangladesh's First Flexible Discount for EdTech — Learn Without Limits!", thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" },
-  { id: 12, title: "EcoRevolution Documentary", tags: ["Documentary", "Motion Graphics"], category: "Documentary", duration: "6:20", client: "EcoRevolution", date: "5/12/2024", description: "A compelling documentary exploring environmental sustainability and the revolution towards eco-friendly living.", thumbnail: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80" }
+  
+  // {
+  //   id: 2,
+  //   title: "Cyber Security",
+  //   tags: ["Motion Graphics", "Promo"],
+  //   category: "Motion Graphics",
+  //   duration: "1:06",
+  //   client: "Impel IT",
+  //   date: "11/10/2025",
+  //   description: "अजाणतेपणी एक चूक...",
+  //   thumbnail: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
+  //   videoUrl: "https://www.youtube.com/watch?v=तुमची_लिंक",
+  //   type: "horizontal" // 👈 हे ॲड करा
+  // },
+  // 👇 खालील उदाहरण Shorts/Vertical साठी आहे 👇
+  {
+    id: 3,
+    tags: ["Shorts", "Reels"],
+    category: "Shorts",
+    
+    thumbnail: thumb1, // 👈 इथे इम्पोर्ट केलेले नाव टाका,
+    videoUrl: "https://www.youtube.com/shorts/YtXhDxomB9w",
+    type: "vertical" // 👈 Shorts/Reels साठी हे वापरा
+  },
+
+  {
+    id: 4,
+    tags: ["Shorts", "Reels"],
+    category: "Shorts",
+    client: "Personal",
+    thumbnail: thumb2, // 👈 इथे इम्पोर्ट केलेले नाव टाका,
+    videoUrl: "https://youtube.com/shorts/fKkockWOvOw?feature=share",
+    type: "vertical" // 👈 Shorts/Reels साठी हे वापरा
+  },
+
+  {
+    id: 5,
+    tags: ["Shorts", "Reels"],
+    category: "Shorts",
+    client: "Personal",
+    thumbnail: thumb3, // 👈 इथे इम्पोर्ट केलेले नाव टाका,
+    videoUrl: "https://www.youtube.com/shorts/7bXi_e_enxE",
+    type: "vertical" // 👈 Shorts/Reels साठी हे वापरा
+  }
+  // ... बाकीचे सर्व प्रोजेक्ट्स असेच ॲड करा
 ];
 
 export const services = [
